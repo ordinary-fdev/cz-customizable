@@ -60,7 +60,7 @@ beforeEach(() => {
   readConfigFile.mockReturnValue(defaultConfig);
 });
 
-describe('cz-customizable', () => {
+describe('cz-customizable-2', () => {
   function getMockedCz(answers) {
     return {
       prompt() {

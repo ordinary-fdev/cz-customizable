@@ -6,7 +6,7 @@ const inquirer = require('inquirer');
 const app = require('./index');
 const log = require('./lib/logger');
 
-log.info('cz-customizable standalone version');
+log.info('cz-customizable-2 standalone version');
 
 const commit = (commitMessage) => {
   try {
