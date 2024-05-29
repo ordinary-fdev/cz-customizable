@@ -1,4 +1,4 @@
-# cz-customizable
+# cz-customizable-2
 
 The customizable Commitizen plugin (or standalone utility) to help achieve consistent commit messages such as [Conventional Commits](https://www.conventionalcommits.org/). Note that you can create any commit message pattern. You don't have to use the pattern from the Conventional Commits. For example, my team uses this pattern: `[minor] add new feature xyz`
 
@@ -9,11 +9,11 @@ Suitable for large teams working with multiple projects with their own commit sc
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![npm monthly downloads](https://img.shields.io/npm/dm/cz-customizable.svg?style=flat-square)](https://www.npmjs.com/package/cz-customizable)
-[![bundlephobia](https://badgen.net/bundlephobia/minzip/cz-customizable)](https://bundlephobia.com/package/cz-customizable)
+[![npm monthly downloads](https://img.shields.io/npm/dm/cz-customizable-2.svg?style=flat-square)](https://www.npmjs.com/package/cz-customizable-2)
+[![bundlephobia](https://badgen.net/bundlephobia/minzip/cz-customizable-2)](https://bundlephobia.com/package/cz-customizable-2)
 
 
-You have two ways to use `cz-customizable`. Originally, this project started as a commitizen plugin (Option 1). We introduced the second option to run this `cz-customizable` in standalone mode (Option 2), just like any NodeJS script. It's recommended to use `Option 2` for simplicity. The way you configure is shared between both options.
+You have two ways to use `cz-customizable-2`. Originally, this project started as a commitizen plugin (Option 1). We introduced the second option to run this `cz-customizable-2` in standalone mode (Option 2), just like any NodeJS script. It's recommended to use `Option 2` for simplicity. The way you configure is shared between both options.
 
 # Quick start **(New, recommended)**
 ## Configuration
@@ -22,32 +22,32 @@ You have two ways to use `cz-customizable`. Originally, this project started as 
 * Option 1: Move file `cz-config.js` to your home directory.
 * Option 2: Put file `cz-config.js` at the root level of your project and commit it to your code repository (Assuming you have a team agreement to use this tool).
 
-## cz-customizable via global install
+## cz-customizable-2 via global install
 
-`npm i cz-customizable -g`
+`npm i cz-customizable-2 -g`
 
-Then run `cz-customizable` from your root repo. You can also use the alias `cz-cust`.
+Then run `cz-customizable-2` from your root repo. You can also use the alias `cz-cust`.
 
 If everything is correct, you should see commit questions like the image above.
 
 # Slow start
 
-## Option 1 - cz-customizable via npx
+## Option 1 - cz-customizable-2 via npx
 
-`npx cz-customizable`
+`npx cz-customizable-2`
 
 
-## Option 2 - cz-customizable in standalone mode
+## Option 2 - cz-customizable-2 in standalone mode
 
-Use `cz-customizable` without `commitzen`.
+Use `cz-customizable-2` without `commitzen`.
 
-* npm install `npm install cz-customizable --save-dev`
+* npm install `npm install cz-customizable-2 --save-dev`
 * add a new script to your `package.json`:
 
 ```
 "scripts" : {
   ...
-  "commit": "./node_modules/cz-customizable/standalone.js"
+  "commit": "./node_modules/cz-customizable-2/standalone.js"
 }
 ```
 
@@ -55,19 +55,19 @@ Use `cz-customizable` without `commitzen`.
 * now run: `npm run commit`.
 
 
-## Option 3 - cz-customizable as commitizen plugin
+## Option 3 - cz-customizable-2 as commitizen plugin
 
 This is how this project started.
 
 * install commitizen in case you don't have it: `npm install -g commitizen`. Make sure you have the latest version of commitizen installed globally.
 
-* configure `commitizen` to use `cz-customizable` as plugin. Add those lines to your `package.json`:
+* configure `commitizen` to use `cz-customizable-2` as plugin. Add those lines to your `package.json`:
 
 ```
 ...
 "config": {
   "commitizen": {
-    "path": "node_modules/cz-customizable"
+    "path": "node_modules/cz-customizable-2"
   }
 }
 ```
@@ -80,16 +80,16 @@ This is how this project started.
 
 ### Option 1 - You can make changes to your git repository, file `package.json`.
 
-* `cz-customizable` will first look for a file called `.cz-config.js` or `.config/cz-config.js` in the project root, near your `package.json`
+* `cz-customizable-2` will first look for a file called `.cz-config.js` or `.config/cz-config.js` in the project root, near your `package.json`
 * If no config found, it will look for `.cz-config.js` or or `.config/cz-config.js` in your home directory
 * alternatively add the config location in your `package.json`:
 ```
 ...
 "config": {
   "commitizen": { // not needed for standlone usage
-    "path": "node_modules/cz-customizable"
+    "path": "node_modules/cz-customizable-2"
   },
-  "cz-customizable": {
+  "cz-customizable-2": {
     "config": "config/path/to/my/config.js"
   }
 }
@@ -100,7 +100,7 @@ Note: option one allows you to have your config away from root directory. It als
 
 ### No Changes to your git repository*.
 
-This is suitable when your team is not ready to roll `cz-customizable` across all teams but you still would like to use it for your own commits, no matter the project.
+This is suitable when your team is not ready to roll `cz-customizable-2` across all teams but you still would like to use it for your own commits, no matter the project.
 
 Steps:
 * create config file:
@@ -110,8 +110,8 @@ Steps:
 #### Additional steps when used as commitizen plugin
 
 * npm install -g commitizen
-* npm install -g cz-customizable. Make sure you have version `>v5.6.x`
-* create global commitizen config file `.czrc`: `echo '{ "path": "cz-customizable" }' > ~/.czrc`
+* npm install -g cz-customizable-2. Make sure you have version `>v5.6.x`
+* create global commitizen config file `.czrc`: `echo '{ "path": "cz-customizable-2" }' > ~/.czrc`
 * now run: `npx git-cz` or `git cz`.
 
 
@@ -150,8 +150,9 @@ Here are the options you can set in your `.cz-config.js`:
 * **allowBreakingChanges**: {Array of Strings: default none}. List of commit types you would like to the question `breaking change` prompted. Eg.: ['feat', 'fix'].
 * **skipQuestions**: {Array of Strings: default none}. List of questions you want to skip. Eg.: ['body', 'footer'].
 * **skipEmptyScopes**: {boolean, default false}: If a chosen type has no scopes declared, skip the scope question
-* **appendBranchNameToCommitMessage**: If you use `cz-customizable` with `cz-customizable-ghooks`, you can get the branch name automatically appended to the commit message. This is done by a commit hook on `cz-customizable-ghooks`. This option has been added on `cz-customizable-ghooks`, v1.3.0. Default value is `true`.
+* **appendBranchNameToCommitMessage**: If you use `cz-customizable-2` with `cz-customizable-ghooks`, you can get the branch name automatically appended to the commit message. This is done by a commit hook on `cz-customizable-ghooks`. This option has been added on `cz-customizable-ghooks`, v1.3.0. Default value is `true`.
 * **ticketNumberPrefix**: {string, default 'ISSUES CLOSED:'}: Set custom prefix for footer ticker number.
+* **ticketNumberSuffix**: {string, default ''}: Set custom suffix for footer ticker number.
 * **breakingPrefix**: {string, default 'BREAKING CHANGE:'}: Set a custom prefix for the breaking change block in commit messages.
 * **footerPrefix**: {string, default 'ISSUES CLOSED:'}: Set a custom prefix for the footer block in commit messages. Set to empty string to remove prefix.
 * **breaklineChar**: {string, default '|'}: It gets replaced with \n to create the breakline in your commit message. This is supported for fields `body` and `footer` at the moment.

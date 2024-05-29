@@ -1,4 +1,4 @@
-declare module "cz-customizable" {
+declare module "cz-customizable-2" {
   export interface Option {
     name: string;
     value?: string;
@@ -22,6 +22,7 @@ declare module "cz-customizable" {
     skipQuestions?: string[];
     appendBranchNameToCommitMessage?: boolean;
     ticketNumberPrefix?: string;
+    ticketNumberSuffix?:string;
     breakingPrefix?: string;
     footerPrefix?: string;
     subjectLimit?: number;
